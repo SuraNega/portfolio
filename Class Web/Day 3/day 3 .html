@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+    <script>
+        let number =8; 
+        if (number%2==0){
+            document.write(number+ " is even <br>");
+            
+        }
+        else {
+            document.write (number + " is odd<br>");
+        }
+        let day ="saturday";
+        if (day === "saturday"|| day === "sunday"){
+            document.write(day + " is weekned.<br>");
+           
+        
+        }
+        else{
+            document.write(day + "is work day ");
+                
+            }
+
+        let num = 0;
+        
+        if(num>0) {
+            document.write(num + " is positive <br>");
+        } else if(num<0) {
+            document.write(num + " is negative <br>");
+        } else {
+            document.write(num + " is zero <br>");
+        }
+
+        let fruit = "apple";
+        switch(fruit) {
+            case 'banana': 
+                console.log("IS banana");
+                break;
+            case 'apple': 
+                console.log("IS apple");
+                break;
+            case 'orange': 
+                console.log("IS orange");
+                break;
+            default: 
+                console.log("IS Unknown");
+        }
+
+        let fruits =["apple", "banana", "cherry" ,"orange"];
+        document.write ("First fruit: " + fruits [0] + "<br>");
+        
+        document.write ("List of all fruits -- for loop<br>");
+        for(let i=0; i<fruits.length; i++) {
+            document.write (fruits [i] + "<br>");
+        }
+
+        document.write ("List of all fruits -- while loop<br>");
+        let j = 0 ;
+        while (j < fruits.length) {
+            document.write(fruits [j] + "<br>");
+            j++;
+        }
+
+        document.write ("List of all fruits -- do while loop<br>");
+        let k = 0 ;
+        do {
+           document.write(fruits [k] + "<br>"); 
+           k++;
+        } while (k < fruits.length)
+
+        document.write("From 1 to 5 <br>");
+        for(let a=1; a<=5; a++) {
+            document.write(a + "<br>");
+        }
+        document.write("From 5 to 1 <br>");
+        for(let a=5; a>0; a--) {
+            document.write(a + "<br>");
+        }
+
+        function greet (name){
+            document.write("hello " + name + "<br>");
+
+        }
+        greet("abebe");
+
+        function showAlert(){
+            alert ("button was clicked!");
+        }
+
+        function ChangeText(){
+            document.getElementById("myParagraph").innerText = "Changed Text"
+        }
+
+        function ChangeToImage() {
+            const paragraph = document.getElementById("myParagraph");
+            const img = document.createElement("img");
+            img.src = "./goal1.png";
+            paragraph.parentNode.replaceChild(img, paragraph);
+        }
+
+        function ChangeImage() {
+            const image = document.getElementById("pic");
+            const img = document.createElement("img");
+            img.src = "./gg.png";
+            image.parentNode.replaceChild(img, image);
+        }
+
+    </script>
+<button onclick="showAlert()">Click ME </button>
+<p id="myParagraph">This is original</p>
+<button onclick="ChangeText()"> Change Text</button>
+<button onclick="ChangeToImage()"> Change To Image</button>
+<br>
+<img id="pic" src="goal1.png" width="300">
+<button onclick="ChangeImage()"> Change Image</button>
+</body>
+
+</html>
